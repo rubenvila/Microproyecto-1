@@ -65,9 +65,9 @@ cell.forEach(e => {
             letter[winningIterator].classList.add("show-bingo");
 
             winningIterator++;
-            if(winningIterator === 5) {
+            if(winningIterator === 6) {
                 alert('B I N G O')
-                location.reload();
+                //location.reload();
             }
         }
     })
@@ -82,7 +82,7 @@ function matchWin() {
             if(cell[index].classList.contains("strickout")) ite++;
         })
 
-        if(ite === 5) {
+        if(ite === 3) {
             let indexWin = winningPositions.indexOf(combination);
             winningPositions.splice(indexWin, 1)
         }
@@ -92,6 +92,5 @@ function matchWin() {
         })
     })
 }
-
 
 console.log(arr)

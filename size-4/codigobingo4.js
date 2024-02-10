@@ -67,9 +67,9 @@ cell.forEach(e => {
             letter[winningIterator].classList.add("show-bingo");
 
             winningIterator++;
-            if(winningIterator === 5) {
+            if(winningIterator === 10) {
                 alert('B I N G O')
-                location.reload();
+                //location.reload();
             }
         }
     })

@@ -59,6 +59,8 @@ body:focus {
 
 .cell-format:hover {
     background-color: #cccece;
+    transform: scale(1.05);
+    border: 4px solid #19b64d;
 }
 
 .letter-div {

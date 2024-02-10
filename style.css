@@ -12,6 +12,13 @@ body {
     background-color: rgb(43, 107, 190);
   }
 
+
+.logo:hover {
+    transition: .1s;
+    transform: scale(1.05);
+
+}
+
 /* BOX DE REGISTRO */
 
 .registro {
@@ -71,7 +78,6 @@ body {
     padding: 5px 5%;
     align-items: center;
     justify-content: space-between;
-    
 }
 .header .logo img {
     height: 75px;
@@ -91,6 +97,11 @@ body {
     text-decoration: none;
     background-image: linear-gradient(rgb(230, 90, 90),rgb(196, 35, 35));
 }
+.primerboton:hover {
+    transform: scale(1.03);
+    transform: .1s;
+}
+
 
 .boton-escoger-carton {
     background: rgb(0, 40, 92);
@@ -108,6 +119,8 @@ body {
 
 .boton-escoger-carton:hover {
     background: rgb(136, 120, 120);
+    transform: scale(1.06);
+    transition: .3s;
 }
 
 .botones-escoger-carton {
@@ -119,5 +132,4 @@ body {
     color: white;
     transition: 0.4s;
     align-self: center;
-
 }
