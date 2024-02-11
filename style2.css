@@ -138,11 +138,11 @@ body:focus {
 }
 
 .showdata {
-    width: 100rem;
+    align-self: center;
     display: flex;
     justify-content: center;
     margin: auto;
     color: white;
-    font-size: 20pt;
+    font-size: 30pt;
     align-items: center;
 }

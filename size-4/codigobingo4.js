@@ -36,6 +36,7 @@ function shuffle(arr) {
 }
 
 let iterator = 0;
+let numeDeLaMatriz = []
 
 for (i = 0; i < 4; i++) {
     let tr = document.createElement("tr")
@@ -54,6 +55,7 @@ for (i = 0; i < 4; i++) {
         td.appendChild(div)
         tr.appendChild(td)
         iterator++;
+        numeDeLaMatriz.push(td.id)
     }
 }
 
@@ -71,8 +73,9 @@ cell.forEach(e => {
 
             winningIterator++;
             if(contadorNumMarcados === 16) {
-                alert('¡BINGO!')
-                location.reload();
+                //alert('¡BINGO!')
+                swal("¡BINGO!","");
+                //location.reload();
             }
         }
     })
@@ -113,8 +116,9 @@ function printClick() {
     counter++;
     showclicks.innerHTML = "Turno de juego: " + counter;
     if(counter == 26) {
-        alert('SE HA ACABADO EL JUEGO');
-        location.reload();
+        //alert('SE HA ACABADO EL JUEGO');
+        swal("SE HA ACABADO EL JUEGO","");
+        //location.reload();
     }
     
 } 
@@ -135,8 +139,15 @@ function generarNumero() {
     document.getElementById(
         "numeroGenerado"
     ).textContent = `${numeroAleatorio}`;
-    } else {
-    document.getElementById("numeroGenerado").textContent =
-        "Ya se generaron todos los números.";
-    }
+    numeComparar = numeroAleatorio
+}
+
+for(i=0; i < numeDeLaMatriz.length; i++) {
+    if(numeDeLaMatriz[i] == numeComparar){
+        //alert("¡TIENES EL NÚMERO " + numeDeLaMatriz[i] + "!") 
+        swal("¡TIENES EL NÚMERO "+ numeDeLaMatriz[i]+ "!");
+    }     
+
+}
+
 }

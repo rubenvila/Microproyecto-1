@@ -34,6 +34,7 @@ function shuffle(arr) {
 }
 
 let iterator = 0;
+let numeDeLaMatriz = []
 
 for (i = 0; i < 3; i++) {
     let tr = document.createElement("tr")
@@ -52,6 +53,8 @@ for (i = 0; i < 3; i++) {
         td.appendChild(div)
         tr.appendChild(td)
         iterator++;
+        numeDeLaMatriz.push(td.id)
+        //alert(numeDeLaMatriz)
     }
 }
 
@@ -61,16 +64,19 @@ let contadorNumMarcados = 0
 cell.forEach(e => {
     e.addEventListener("click", () => {
         e.classList.add("strickout");
-        contadorNumMarcados++; 
-
+        contadorNumMarcados++;
+        
+         
 
         if(matchWin()) {
             letter[winningIterator].classList.add("show-bingo");
 
+
             winningIterator++;
             if(contadorNumMarcados === 9) {
-                alert('¡BINGO!')
-                location.reload();
+                //alert('¡BINGO!')
+                swal("¡BINGO!","");
+                //location.reload();
             }
         }
     })
@@ -84,6 +90,7 @@ function matchWin() {
         let ite = 0;
         combination.forEach(index => {
             if(cell[index].classList.contains("strickout")) ite++;
+            
         })
 
         if(ite === 3) {
@@ -110,9 +117,11 @@ let counter = 0;
 function printClick() {
     counter++;
     showclicks.innerHTML = "Turno de juego: " + counter;
+// Este es el param. que se cambia para aumentar los turnos de bingo (máx. 50)
     if(counter == 26) {
-        alert('SE HA ACABADO EL JUEGO');
-        location.reload();
+        //alert('SE HA ACABADO EL JUEGO');
+        swal("SE HA ACABADO EL JUEGO");
+        //location.reload();
     }
     
 } 
@@ -133,8 +142,15 @@ function generarNumero() {
     document.getElementById(
         "numeroGenerado"
     ).textContent = `${numeroAleatorio}`;
-    } else {
-    document.getElementById("numeroGenerado").textContent =
-        "Ya se generaron todos los números.";
-    }
+    numeComparar = numeroAleatorio
+}
+
+for(i=0; i < numeDeLaMatriz.length; i++) {
+    if(numeDeLaMatriz[i] == numeComparar){
+        //alert("¡TIENES EL NÚMERO " + numeDeLaMatriz[i] + "!") 
+        swal("¡TIENES EL NÚMERO "+ numeDeLaMatriz[i]+ "!");
+    }     
+
+}
+
 }

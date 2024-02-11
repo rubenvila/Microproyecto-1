@@ -40,8 +40,9 @@ function getUsers(){
     } else{
         userList = JSON.parse(storedList);
     }
+
     return userList;
-    console.log(userList)
+
 }
 
 
