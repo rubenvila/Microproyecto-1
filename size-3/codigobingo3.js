@@ -57,21 +57,25 @@ for (i = 0; i < 3; i++) {
 
 const cell = document.querySelectorAll(".main-table-cell");
 let winningIterator = 0
+let contadorNumMarcados = 0
 cell.forEach(e => {
     e.addEventListener("click", () => {
         e.classList.add("strickout");
+        contadorNumMarcados++; 
+
 
         if(matchWin()) {
             letter[winningIterator].classList.add("show-bingo");
 
             winningIterator++;
-            if(winningIterator === 6) {
-                alert('B I N G O')
-                //location.reload();
+            if(contadorNumMarcados === 9) {
+                alert('¡BINGO!')
+                location.reload();
             }
         }
     })
 })
+
 
 function matchWin() {
     const cell = document.querySelectorAll(".main-table-cell");
@@ -105,8 +109,32 @@ let counter = 0;
 
 function printClick() {
     counter++;
-    console.log("si ")
-    showclicks.innerHTML = "Numero de clicks: " + counter;
+    showclicks.innerHTML = "Turno de juego: " + counter;
+    if(counter == 26) {
+        alert('SE HA ACABADO EL JUEGO');
+        location.reload();
+    }
+    
 } 
 btn1.addEventListener('click',printClick);
+
 // "addEventListener" escucha el evento 'click', y cada vez que ese evento pasa, se lleva a cabo la funcion printClick
+
+
+const numerosPosibles = Array.from({ length: 50 }, (_, i) => i + 1);
+
+// Ordena los números al azar
+numerosPosibles.sort(() => (Math.random() > 0.5 ? 1 : -1));
+
+// Función para generar un número y mostrarlo en la página
+function generarNumero() {
+    if (numerosPosibles.length > 0) {
+    const numeroAleatorio = numerosPosibles.pop();
+    document.getElementById(
+        "numeroGenerado"
+    ).textContent = `${numeroAleatorio}`;
+    } else {
+    document.getElementById("numeroGenerado").textContent =
+        "Ya se generaron todos los números.";
+    }
+}

@@ -17,6 +17,7 @@
           alt="Logo Bingo"
         />
       </div>
+      <b><div class="showdata" id="showdata"></div></b>
     </header>
     <div>
       <button class="botonReiniciarJuego" onclick="reiniciarJuego()">
@@ -27,21 +28,32 @@
     <div class="container">
       <table id="tblBingo"></table>
     </div>
-    <div class="letter-div">
-      <table id="tblLetter">
-        <tr>
-          <td class="letters-bingo">1</td>
-          <td class="letters-bingo">2</td>
-          <td class="letters-bingo">3</td>
-          <td class="letters-bingo">4</td>
-          <td class="letters-bingo">5</td>
-          <td class="letters-bingo">6</td>
-          <td class="letters-bingo">7</td>
-          <td class="letters-bingo">8</td>
-          <td class="letters-bingo">9</td>
-          <td class="letters-bingo">10</td>
-        </tr>
-      </table>
+    <table id="tblLetter">
+      <tr>
+        <td class="letters-bingo"></td>
+        <td class="letters-bingo"></td>
+        <td class="letters-bingo"></td>
+        <td class="letters-bingo"></td>
+        <td class="letters-bingo"></td>
+        <td class="letters-bingo"></td>
+        <td class="letters-bingo"></td>
+        <td class="letters-bingo"></td>
+        <td class="letters-bingo"></td>
+        <td class="letters-bingo"></td>
+      </tr>
+    </table>
+    <div class="generador">
+      <button
+        type="button"
+        id="clickbtn"
+        class="botonGenerarNum"
+        onclick="generarNumero()"
+      >
+        NÚMERO DEL BINGO:
+      </button>
+    </div>
+    <div class="generador">
+      <p class="numeroGenerado" id="numeroGenerado"></p>
     </div>
   </body>
 </html>
