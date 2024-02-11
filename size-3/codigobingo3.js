@@ -93,4 +93,20 @@ function matchWin() {
     })
 }
 
+function reiniciarJuego() {
+    location.reload();
+}
+
 console.log(arr)
+
+let btn1 = document.querySelector('#clickbtn');
+let showclicks = document.querySelector('#showdata');
+let counter = 0;
+
+function printClick() {
+    counter++;
+    console.log("si ")
+    showclicks.innerHTML = "Numero de clicks: " + counter;
+} 
+btn1.addEventListener('click',printClick);
+// "addEventListener" escucha el evento 'click', y cada vez que ese evento pasa, se lleva a cabo la funcion printClick

@@ -96,5 +96,9 @@ function matchWin() {
     })
 }
 
+function reiniciarJuego() {
+    location.reload();
+}
+
 
 console.log(arr)

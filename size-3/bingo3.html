@@ -4,24 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="..\style2.css" />
-    <link rel="icon" href="..\logo.ico" />
-    <script src="codigobingo3.js" defer></script>
+    <link class="logo2" rel="icon" href="..\logo.ico" />
     <title>¡A jugar!</title>
   </head>
 
   <body>
     <header class="header">
-      <div class="logo">
+      <div class="logo" onclick="toMainMenu()">
         <img
           src="https://freepngimg.com/save/177751-bingo-free-clipart-hd/889x742"
           alt="Logo Bingo"
         />
       </div>
     </header>
-
+    <button class="botonReiniciarJuego" onclick="reiniciarJuego()">
+      REINICIAR JUEGO
+    </button>
     <div class="container">
+      <!-- TR: FILA, DENTRO DE CADA TR VA UN TD, QUE ES UNA FILA DEBAJO DE LA ANTERIOR -->
+
       <table id="tblBingo"></table>
     </div>
+
     <div class="letter-div">
       <table id="tblLetter">
         <tr>
@@ -34,5 +38,9 @@
         </tr>
       </table>
     </div>
+
+    <button type="button" id="clickbtn">CLICK ACA</button>
+    <div id="showdata"></div>
+    <script src="codigobingo3.js" defer></script>
   </body>
 </html>

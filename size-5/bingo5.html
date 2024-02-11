@@ -4,21 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="..\style2.css" />
-    <link rel="icon" href="..\logo.ico" />
+    <link class="logo2" rel="icon" href="..\logo.ico" />
     <script src="codigobingo5.js" defer></script>
     <title>¡A jugar!</title>
   </head>
 
   <body>
     <header class="header">
-      <div class="logo">
+      <div class="logo" onclick="toMainMenu()">
         <img
           src="https://freepngimg.com/save/177751-bingo-free-clipart-hd/889x742"
           alt="Logo Bingo"
         />
       </div>
     </header>
-
+    <div>
+      <button class="botonReiniciarJuego" onclick="reiniciarJuego()">
+        REINICIAR JUEGO
+      </button>
+    </div>
     <div class="container">
       <table id="tblBingo"></table>
     </div>
