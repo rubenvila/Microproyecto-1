@@ -1,0 +1,67 @@
+
+* {
+    font-family: 'calibri';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+body {
+    font-size: 25px;
+    font-family: 'calibri';
+    background-color: rgb(43, 107, 190);
+    text-align: center;
+  }
+  table {
+    border-collapse: collapse;
+    margin: 20px auto;
+  }
+  th,
+  td {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+  .header .logo img {
+    height: 75px;
+    width: auto;
+}
+
+.logo:hover {
+    transition: .1s;
+    transform: scale(1.05);
+
+}
+.header {
+    width: 100%;
+    background: rgb(0, 57, 131);
+    display: flex;
+    height: 85px;
+    padding: 5px 5%;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.botonators {
+    margin: 0.5rem;
+    padding: 5px;
+    color: white;
+    font-size: large;
+    background: #d34646;
+    border: 0.5px solid rgb(182, 0, 0);
+    border-radius: 3px;
+}
+.botonators:hover {
+    background: #700000;
+    transform: scale(1.03);
+    transition: .3s;
+}
+
+.numeroGenerado {
+    font-size: 50px;
+}
+
+.matricesContainer {
+    color: rgb(0, 0, 0);
+margin: auto;
+}

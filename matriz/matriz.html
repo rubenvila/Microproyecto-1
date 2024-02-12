@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="..\style2.css" />
+    <link rel="stylesheet" href="matriz.css" />
     <link class="logo2" rel="icon" href="..\logo.ico" />
-    <title>¡A jugar!</title>
+    <title>Tamaño del cartón</title>
   </head>
 
   <body>
@@ -18,29 +18,22 @@
       </div>
       <b><div class="showdata" id="showdata"></div></b>
     </header>
-    <button class="botonReiniciarJuego" onclick="reiniciarJuego()">
-      REINICIAR JUEGO
+    <h1>Tamaño del cartón</h1>
+    <label for="matrixSize">Selecciona el tamaño del cartón:</label>
+    <select class="botonators" id="matrixSize">
+      <option value="3">3x3</option>
+      <option value="4">4x4</option>
+      <option value="5">5x5</option>
+    </select>
+    <button class="botonators" onclick="generarMatrices()">
+      Crear cartones
     </button>
-    <div class="container">
-      <table id="tblBingo"></table>
-    </div>
-
-    <table id="tblLetter">
-      <tr>
-        <td class="letters-bingo"></td>
-        <td class="letters-bingo"></td>
-        <td class="letters-bingo"></td>
-        <td class="letters-bingo"></td>
-        <td class="letters-bingo"></td>
-        <td class="letters-bingo"></td>
-      </tr>
-    </table>
-
+    <div class="matricesContainer" id="matricesContainer"></div>
     <div class="generador">
       <button
         type="button"
         id="clickbtn"
-        class="botonGenerarNum"
+        class="botonators"
         onclick="generarNumero()"
       >
         NÚMERO DEL BINGO:
@@ -49,8 +42,8 @@
     <div class="generador">
       <p class="numeroGenerado" id="numeroGenerado"></p>
     </div>
-
-    <script src="codigobingo3.js" defer></script>
+    <b><div class="showdata" id="showdata"></div></b>
+    <script src="matriz.js" defer></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>
