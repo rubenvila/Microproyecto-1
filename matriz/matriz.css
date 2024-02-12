@@ -5,6 +5,20 @@
     padding: 0;
     box-sizing: border-box;}
 
+
+    /* Estilos CSS (opcional) */
+
+    table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    display: inline-block; /* Agregamos esta línea para mostrar las matrices en una fila */
+    }
+    th,
+    td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    }
+
 body {
     font-size: 25px;
     font-family: 'calibri';
@@ -63,5 +77,10 @@ body {
 
 .matricesContainer {
     color: rgb(0, 0, 0);
-margin: auto;
+    margin: auto;
+}
+
+.numeroEncontrado {
+    color: greenyellow;
+    text-decoration: line-through;
 }

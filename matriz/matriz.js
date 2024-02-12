@@ -1,4 +1,5 @@
 let numeDeLaMatriz = []
+let numeComparar = 0
 
 function generarMatrices() {
     const matrixSize = parseInt(
@@ -85,9 +86,11 @@ function generarNumero() {
 
     for(i=0; i < numeDeLaMatriz.length; i++) {
         if(numeDeLaMatriz[i] == numeComparar){
+            //numeDeLaMatriz[i].
             //alert("¡TIENES EL NÚMERO " + numeDeLaMatriz[i] + "!") 
             swal("¡TIENES EL NÚMERO "+ numeDeLaMatriz[i]+ "!");
-        }     
+        }
+
 
     }
 
